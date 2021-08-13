@@ -85,9 +85,9 @@ func TestQueuePersistence(t *testing.T) {
 	suite.Run(t, s)
 }
 
-func TestConfigStorePersistence(t *testing.T) {
-	s := new(persistencetests.ConfigStorePersistenceSuite)
-	s.TestBase = public.NewTestBaseWithPublicCassandra(&persistencetests.TestBaseOptions{})
-	s.TestBase.Setup()
-	suite.Run(t, s)
-}
+// func TestConfigStorePersistence(t *testing.T) {
+// 	s := new(persistencetests.ConfigStorePersistenceSuite)
+// 	s.TestBase = public.NewTestBaseWithPublicCassandra(&persistencetests.TestBaseOptions{})
+// 	s.TestBase.Setup()
+// 	suite.Run(t, s)
+// }
