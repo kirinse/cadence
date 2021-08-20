@@ -91,8 +91,9 @@ Result:
   Output: "TEST PASSED: true; Details report: timeoutCount: 0, failedCount: 0, openCount:0, launchCount: 100, maxThreshold:1"
 
 ```
-The test will return error if the test doesn't pass. There are two cases:
-* The started stressWorkflow couldn't finish within the timeout
+The test will return error if the test doesn't pass. There are three cases:
+* Some started stressWorkflow are still open after the timeout. This indicate that server is overloaded that couldn't timeout the workflows. 
+* Some started stressWorkflow couldn't finish within the timeout.
 * There are more failed workflows than expected(`failureThreshold` * totalLaunchCount)
 
 The output result is how many stressWorkflow were started successfully, and failed.
